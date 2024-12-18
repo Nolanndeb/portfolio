@@ -1,0 +1,110 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .aftec-container {
+            display: flex;
+            align-items: center; /* Centre verticalement */
+            justify-content: space-around; /* Espace équilibré */
+            padding: 2rem;
+            background-color: #333; /* Fond similaire à ton exemple */
+            color: #fff;
+        }
+
+        .aftec-image img {
+            max-width: 900px; /* Taille de l'image */
+            height: auto;
+            margin-right: 1rem; /* Espacement entre l'image et le texte */
+        }
+
+        .aftec-text {
+            max-width: 600px; /* Contrôle la largeur du texte */
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .line-appear {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: lineFadeIn 1s forwards;
+        }
+        @keyframes lineFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .line-appear:nth-child(1) { animation-delay: 0.2s; }
+        .line-appear:nth-child(2) { animation-delay: 0.4s; }
+        .line-appear:nth-child(3) { animation-delay: 0.6s; }
+        .line-appear:nth-child(4) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <header style="background: url('image.png') no-repeat center center; background-size: cover; height: 120px;">
+        <div class="header-logo">
+            <img src="logo.png" alt="Logo de Nolann Deburck" style="max-height: 70px; margin: 10px;">
+        </div>
+        <nav>
+            <ul>
+                <li class="line-appear"><a href="index.html">Accueil</a></li>
+                <li class="line-appear"><a href="profil.html">Profil</a></li>
+                <li class="line-appear"><a href="projets.html">Projets</a></li>
+                <li class="line-appear"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="background: url('banniere.jpg') no-repeat center center fixed; background-size: cover; height: 400px;">
+        <div class="hero-content">
+            <h1 class="line-appear">Nolann DEBURCK</h1>
+            <p class="line-appear">Etudiant en BTS SIO et alternant chez Denis Materiaux</p>
+        </div>
+    </section>
+
+    <main>
+        <section id="introduction">
+            <h2 class="line-appear">Bonjour et bienvenue sur mon Portfolio !</h2>
+            <p class="line-appear">Je suis Nolann, Etudiant a l'AFTEC de Rennes depuis septembre 2023 et Technicien Support HelpDesk pour le groupe Denis Matériaux en contrat d'alternance</p>
+            <img class="line-appear" src="nolann.jpeg" alt="image" style="display: block; margin: auto;">
+            <br>
+            <br>
+            <br>
+        <div class="aftec-container">
+        <div class="aftec-image">
+            <img src="logo.png" alt="Logo AFTEC">
+        </div>
+        <div class="aftec-text">
+            <h2 class="line-appear">L'AFTEC De Rennes</h1>
+            <p>
+                L’école AFTEC est pluridisciplinaire et propose plus de 
+14 formations de niveau BTS (Bac+2) et 2 titres professionnels accessibles en initial et en alternance dans divers domaines : Banque et Assurance, Comptabilité et Gestion, Communication, Commerce, Digital, Immobilier, Informatique, Tourisme, Logistique et Transport, Ressources Humaines, Audiovisuel, Sanitaire et Social. Avec plus de 650 étudiants, l’école AFTEC de Rennes est un leader sur le département. </p> </div> </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="aftec-container">
+                <div class="aftec-image">
+                    <img src="dm.jpeg" alt="Logo AFTEC">
+                </div>
+                <div class="aftec-text">
+                    <h2 class="line-appear">Denis Materiaux</h1>
+                    <p>Je suis, depuis septembre 2023, en contrat d'alternance chez denis materiaux, j'accompagne un second technicien ainsi qu'un administrateur et un alternant en administration dans le maintien operationnel de l'infrastructure ainsi que le support sur differents materiels et logiciels tels que les imprimantes, les ordinateur, les smartphone ainsi que les differents l'ogiciels ERP (outils de vente) et les applications métiers</p>
+        </section>
+    </main>
+
+    <footer style="position: static; bottom: 0; left: 0; right: 0;">
+        <p class="line-appear">© 2024 Nolann Deburck. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

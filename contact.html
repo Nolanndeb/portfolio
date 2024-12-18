@@ -1,0 +1,71 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil de Nolann Deburck</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .line-appear {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: lineFadeIn 1s forwards;
+        }
+        @keyframes lineFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .line-appear:nth-child(1) { animation-delay: 0.2s; }
+        .line-appear:nth-child(2) { animation-delay: 0.4s; }
+        .line-appear:nth-child(3) { animation-delay: 0.6s; }
+        .line-appear:nth-child(4) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <header style="background: url('image.png') no-repeat center center; background-size: cover; height: 120px;">
+        <div class="header-logo">
+            <img src="logo.png" alt="Logo de Nolann Deburck" style="max-height: 70px; margin: 10px;">
+        </div>
+        <nav>
+            <ul>
+                <li class="line-appear"><a href="index.html">Accueil</a></li>
+                <li class="line-appear"><a href="profil.html">Profil</a></li>
+                <li class="line-appear"><a href="projets.html">Projets</a></li>
+                <li class="line-appear"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="contact">
+            <h2 class="line-appear">📞 Me contacter</h2>
+            <p class="line-appear">Pour toute question ou opportunité, vous pouvez me contacter via le formulaire ci-dessous :</p>
+            <form action="mailto:nolanndeburck554@gmail.com" method="post" enctype="text/plain">
+                <label for="name" class="line-appear">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" class="line-appear">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message" class="line-appear">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="line-appear">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="position: static; bottom: 0; left: 0; right: 0;">
+        <p>© 2024 Nolann Deburck. Tous droits réservés.</p>
+    </footer>   
+</body>
+</html>
