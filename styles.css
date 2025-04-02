@@ -96,3 +96,10 @@ button {
 button:hover {
     background-color: #555;
 }
+
+.centered-img {
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
