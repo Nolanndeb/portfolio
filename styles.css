@@ -2,11 +2,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.4;
     margin: 0;
     padding: 0;
     color: #ffffff;
-    font-size: 0.9rem; /* Taille globale réduite */
+    font-size: 0.75rem; /* Taille globale très réduite */
     background-color: #313131;
 }
 
@@ -15,12 +15,12 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #363636;
-    padding: 0.8rem;
+    padding: 0.6rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-logo img {
-    max-height: 40px;
+    max-height: 35px;
 }
 
 nav ul {
@@ -31,18 +31,18 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.95rem; /* Réduit taille des liens de navigation */
+    font-size: 0.8rem; /* Très petite taille */
 }
 
 .hero {
-    height: 300px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,39 +51,39 @@ nav ul li a {
 }
 
 .hero-content h1 {
-    font-size: 1.8rem; /* Réduit taille des titres principaux */
+    font-size: 1.4rem; /* Réduction importante */
     margin: 0;
     text-align: center;
 }
 
 .hero-content p {
-    font-size: 1rem; /* Réduit taille des sous-titres */
+    font-size: 0.85rem; /* Réduction importante */
     text-align: center;
 }
 
 main {
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
 }
 
 h1 {
-    font-size: 1.6rem;
-}
-
-h2 {
-    font-size: 1.4rem;
-}
-
-h3 {
     font-size: 1.2rem;
 }
 
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
 h4 {
-    font-size: 1.05rem;
+    font-size: 0.8rem;
 }
 
 p, li {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     text-align: center;
 }
 
@@ -91,18 +91,19 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 0.8rem;
+    padding: 0.6rem;
     position: static;
     bottom: 0;
     width: 100%;
+    font-size: 0.7rem;
 }
 
 button {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
     cursor: pointer;
 }
 
@@ -113,6 +114,6 @@ button:hover {
 .centered-img {
     display: block;
     margin: auto;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 }
