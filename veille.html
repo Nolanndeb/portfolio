@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épreuves de Nolann Deburck</title>
+  <style>
+    /* RESET + BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.4;
+      background-color: #313131;
+      color: #fff;
+      font-size: 0.75rem;
+    }
+
+    /* HEADER */
+    header {
+      background: url('image.png') no-repeat center center;
+      background-size: cover;
+      height: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem;
+    }
+
+    .header-logo img {
+      max-height: 35px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+
+    /* TITRE PAGE */
+    h2.line-appear {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+
+    /* SECTIONS */
+    .epreuve-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .epreuve-row.gauche .texte { order: 1; }
+    .epreuve-row.gauche .illustration { order: 2; }
+
+    .epreuve-row.droite .texte { order: 2; }
+    .epreuve-row.droite .illustration { order: 1; }
+
+    .texte {
+      flex: 1 1 60%;
+    }
+
+    .illustration {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+
+    .illustration img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 0.8rem;
+      margin: 0.5rem 0 0.3rem;
+    }
+
+    p, li {
+      font-size: 0.75rem;
+      text-align: left;
+      margin-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* DOSSIER PÉDAGOGIQUE */
+    .projet {
+      margin: 2rem;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem;
+      font-size: 0.7rem;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+      .epreuve-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .texte, .illustration {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+      ul {
+        padding-left: 0;
+        list-style-position: inside;
+      }
+      p, li {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-logo">
+      <img src="logo.png" alt="Logo de Nolann Deburck">
+    </div>
+    <nav>
+      <ul>
+        <li class="line-appear">><a href="index.html">Accueil</a></li>
+        <li class="line-appear">><a href="profil.html">Profil</a></li>
+        <li class="line-appear">><a href="projets.html">Projets</a></li>
+        <li class="line-appear">><a href="ep.html">Épreuves</a></li>
+        <li class="line-appear"><a href="ep.html">Veille Technologique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="line-appear">Veille Technologique</h2>
+
+    <!-- ÉPREUVE E5 -->
+    <div class="epreuve-row gauche">
+      <div class="texte">
+        <h2>Processeur</h2>
+        <h3>Sujet :</h3>
+        <p>Cette Veille Technologique voise a suivre les dernieres nouveautées en termes de processeur sur les smartphone, ordinateurs ou tout autres materiels informatiques : </p>
+        <ul>
+          <li class="line-appear">><a href="https://www.cowcotland.com/news/95774/amd-lance-venice-premier-processeur-hpc-grave-en-2-8239-nm-chez-tsmc.html">AMD lance « Venice », premier processeur HPC gravé en 2 nm chez TSMC</a></li>
+          <li class="line-appear">><a href="https://www.zdnet.fr/actualites/m3-ultra-le-processeur-apple-le-plus-puissant-a-ce-jour-marque-un-bond-de-performances-majeur-407579.htm">M3 Ultra : le processeur Apple le plus puissant à ce jour marque un bond de performances majeur</a></li>
+          <li class="line-appear">><a href="https://overclocking.com/les-processeurs-intel-bartlett-lake-s-bientot-dans-nos-pcs/">Les processeurs Intel Bartlett Lake-S bientôt dans nos PCs ?</a></li>
+          
+        </ul>
+        <h3>2 - MODALITÉS D'ÉVALUATION :</h3>
+        <h4>Forme ponctuelle orale :</h4>
+        <ul>
+          <li>Présentation du parcours (10 min)</li>
+          <li>Échange sur les compétences (30 min)</li>
+        </ul>
+        <h4>Contrôle en cours de formation :</h4>
+        <p>Évaluation personnalisée via un dossier professionnel et une grille d’évaluation.</p>
+      </div>
+      <div class="illustration">
+        <img src="e5.png" alt="Illustration E5">
+      </div>
+    </div>
+
+    <!-- ÉPREUVE E6 -->
+    <div class="epreuve-row droite">
+      <div class="illustration">
+        <img src="e6.png" alt="Illustration E6">
+      </div>
+      <div class="texte">
+        <h3>2. Épreuve E6</h3>
+        <h2>ADMINISTRATION DES SYSTÈMES ET DES RÉSEAUX</h2>
+        <h3>1 - OBJECTIF :</h3>
+        <ul>
+          <li>Concevoir une solution d’infrastructure réseau</li>
+          <li>Installer, tester et déployer la solution</li>
+          <li>Exploiter, dépanner et superviser</li>
+        </ul>
+        <h3>2 - CRITÈRES D'ÉVALUATION :</h3>
+        <p>Basé sur deux réalisations professionnelles du dossier candidat.</p>
+        <h3>3 - MODALITÉS D'ÉVALUATION :</h3>
+        <h4>1re phase :</h4>
+        <p>Préparation (30 min) + Entretien (20 min)</p>
+        <h4>2e phase :</h4>
+        <p>Préparation (1h) + Réalisation + Entretien (20 min)</p>
+      </div>
+    </div>
+
+    <!-- DOSSIER -->
+    <div class="projet">
+      <h3>3. Dossier Pédagogique</h3>
+      <p><strong>Dossier Pedagogique E5</strong></p>
+      <p><strong>Dossier Pedagogique E6</strong></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Nolann Deburck. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
