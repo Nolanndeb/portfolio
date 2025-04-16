@@ -4,93 +4,233 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Épreuves de Nolann Deburck</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* RESET + BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.4;
+      background-color: #313131;
+      color: #fff;
+      font-size: 0.75rem;
+    }
+
+    /* HEADER */
+    header {
+      background: url('image.png') no-repeat center center;
+      background-size: cover;
+      height: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem;
+    }
+
+    .header-logo img {
+      max-height: 35px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+
+    /* TITRE PAGE */
+    h2.line-appear {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+
+    /* SECTIONS */
+    .epreuve-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .epreuve-row.gauche .texte { order: 1; }
+    .epreuve-row.gauche .illustration { order: 2; }
+
+    .epreuve-row.droite .texte { order: 2; }
+    .epreuve-row.droite .illustration { order: 1; }
+
+    .texte {
+      flex: 1 1 60%;
+    }
+
+    .illustration {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+
+    .illustration img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 0.8rem;
+      margin: 0.5rem 0 0.3rem;
+    }
+
+    p, li {
+      font-size: 0.75rem;
+      text-align: left;
+      margin-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* DOSSIER PÉDAGOGIQUE */
+    .projet {
+      margin: 2rem;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem;
+      font-size: 0.7rem;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+      .epreuve-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .texte, .illustration {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+      ul {
+        padding-left: 0;
+        list-style-position: inside;
+      }
+      p, li {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header style="background: url('image.png') no-repeat center center; background-size: cover; height: 120px;">
+
+  <header>
     <div class="header-logo">
-      <img src="logo.png" alt="Logo de Nolann Deburck" style="max-height: 70px; margin: 10px;">
+      <img src="logo.png" alt="Logo de Nolann Deburck">
     </div>
     <nav>
       <ul>
-        <li class="line-appear"><a href="index.html">Accueil</a></li>
-        <li class="line-appear"><a href="profil.html">Profil</a></li>
-        <li class="line-appear"><a href="projets.html">Projets</a></li>
-        <li class="line-appear"><a href="ep.html">Épreuves</a></li>
-        <li class="line-appear"><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="ep.html">Épreuves</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="projets">
-      <h2 class="line-appear">🛠️ Mes Épreuves</h2>
+    <h2 class="line-appear">🛠️ Mes Épreuves</h2>
 
-      <!-- Épreuve E5 -->
-      <div class="projet">
-        <h3 class="line-appear">1. Épreuve E5</h3>
+    <!-- ÉPREUVE E5 -->
+    <div class="epreuve-row gauche">
+      <div class="texte">
+        <h3>1. Épreuve E5</h3>
         <h2>SUPPORT ET MISE À DISPOSITION DE SERVICES INFORMATIQUES</h2>
-
         <h3>1 - OBJECTIF :</h3>
-        <p>Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences décrites dans le bloc de compétences « Support et mise à disposition de services informatiques », à savoir :</p>
+        <p>Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences suivantes :</p>
         <ul>
           <li>Gérer le patrimoine informatique</li>
-          <li>Répondre aux incidents et demandes d’assistance et d’évolution</li>
+          <li>Répondre aux incidents et demandes</li>
           <li>Développer la présence du service informatique</li>
           <li>Travailler en mode projet</li>
-          <li>Mettre à disposition des utilisateurs un service informatique</li>
+          <li>Mettre à disposition des services</li>
           <li>Organiser son développement professionnel</li>
         </ul>
-
         <h3>2 - MODALITÉS D'ÉVALUATION :</h3>
-        <h4>Forme ponctuelle orale (durée 40 minutes) :</h4>
-        <p>L’épreuve comporte deux phases distinctes :</p>
+        <h4>Forme ponctuelle orale :</h4>
         <ul>
-          <li>Présentation du parcours de professionnalisation (10 min max).</li>
-          <li>Échange avec la commission sur le parcours et les compétences acquises (30 min).</li>
+          <li>Présentation du parcours (10 min)</li>
+          <li>Échange sur les compétences (30 min)</li>
         </ul>
-        <p>Évaluation de la capacité du candidat à établir un bilan de ses compétences.</p>
-
         <h4>Contrôle en cours de formation :</h4>
-        <p>Évaluation en deux temps dans un cadre personnalisé avec un accompagnement au dossier professionnel.</p>
-        <p>Validation via une grille d’évaluation.</p>
+        <p>Évaluation personnalisée via un dossier professionnel et une grille d’évaluation.</p>
       </div>
+      <div class="illustration">
+        <img src="e5.png" alt="Illustration E5">
+      </div>
+    </div>
 
-      <!-- Épreuve E6 -->
-      <div class="projet">
-        <h3 class="line-appear">2. Épreuve E6</h3>
-        <h1>ADMINISTRATION DES SYSTÈMES ET DES RÉSEAUX</h1>
-
+    <!-- ÉPREUVE E6 -->
+    <div class="epreuve-row droite">
+      <div class="illustration">
+        <img src="e6.png" alt="Illustration E6">
+      </div>
+      <div class="texte">
+        <h3>2. Épreuve E6</h3>
+        <h2>ADMINISTRATION DES SYSTÈMES ET DES RÉSEAUX</h2>
         <h3>1 - OBJECTIF :</h3>
-        <p>Cette épreuve vise à évaluer l’acquisition des compétences du bloc « Administration des systèmes et des réseaux » de l’option « Solutions d’infrastructure, systèmes et réseau », à savoir :</p>
         <ul>
           <li>Concevoir une solution d’infrastructure réseau</li>
-          <li>Installer, tester et déployer une solution</li>
-          <li>Exploiter, dépanner et superviser une infrastructure réseau</li>
+          <li>Installer, tester et déployer la solution</li>
+          <li>Exploiter, dépanner et superviser</li>
         </ul>
-
         <h3>2 - CRITÈRES D'ÉVALUATION :</h3>
-        <p>L’épreuve repose sur deux réalisations professionnelles du dossier de la personne candidate.</p>
-
+        <p>Basé sur deux réalisations professionnelles du dossier candidat.</p>
         <h3>3 - MODALITÉS D'ÉVALUATION :</h3>
-        <h4>Forme ponctuelle pratique et orale : 40 min (dont 30 min de préparation)</h4>
-        <h4>Première phase :</h4>
-        <p>Préparation de 30 min + entretien de 20 min basé sur une expression de besoin.</p>
-
-        <h4>Deuxième phase :</h4>
-        <p>Préparation de 1h + réalisation d’une solution + entretien de 20 min avec la commission.</p>
+        <h4>1re phase :</h4>
+        <p>Préparation (30 min) + Entretien (20 min)</p>
+        <h4>2e phase :</h4>
+        <p>Préparation (1h) + Réalisation + Entretien (20 min)</p>
       </div>
+    </div>
 
-      <!-- Dossier pédagogique -->
-      <div class="projet">
-        <h3 class="line-appear">3. Dossier Pédagogique</h3>
-        <p class="line-appear"><strong>Description à venir…</strong></p>
-      </div>
-    </section>
+    <!-- DOSSIER -->
+    <div class="projet">
+      <h3>3. Dossier Pédagogique</h3>
+      <p><strong>Description à venir…</strong></p>
+    </div>
   </main>
 
-  <footer style="position: static; bottom: 0; left: 0; right: 0;">
-    <p class="line-appear">© 2024 Nolann Deburck. Tous droits réservés.</p>
+  <footer>
+    <p>© 2024 Nolann Deburck. Tous droits réservés.</p>
   </footer>
+
 </body>
 </html>
